@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan SMAN 103</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.PNG" alt="School Library Logo" class="logo-image">
+                <h1>Perpustakaan SMAN 103</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="catalogue.html">Catalogue</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="registration.html" class="active">Registration</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Absensi Peserta Didik</h2>
+        </section>
+
+        <section class="registration-content">
+            <div class="registration-form">
+                <h3>Masukkan Nomor Siswa Anda</h3>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="studentNumber">NIS:</label>
+                        <input type="text" id="studentNumber" name="studentNumber" required 
+                               pattern="[0-9]+" title="Please enter numbers only"
+                               placeholder="Enter your student number">
+                    </div>
+                    <button type="submit">Daftar Entri</button>
+                </form>
+            </div>
+
+            <div class="attendance-stats">
+                <h3>Kehadiran hari ini</h3>
+                <div class="stats-card">
+                    <h4 id="totalEntries">0</h4>
+                    <p>Siswa masuk hari ini</p>
+                </div>
+            </div>
+
+            <div class="recent-entries">
+                <h3>Entri Terbaru</h3>
+                <div id="recentEntriesList" class="entries-list">
+                    <p class="no-entries">Belum ada entri hari ini</p>
+                </div>
+                <div class="dev-tools" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee;">
+                    <button onclick="clearAllAttendanceData(); updateAttendanceStats(); alert('All attendance data cleared!')" 
+                            style="background: #dc3545; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer;">
+                        Hapus Semua Data (Dev)
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Perpustakaan SMAN 103. All rights reserved.</p>
+    </footer>
+
+    <script src="registration.js"></script>
+</body>
+</html>

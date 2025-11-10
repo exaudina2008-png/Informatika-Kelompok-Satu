@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan SMAN 103 Jakarta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.PNG" alt="School Library Logo" class="logo-image">
+                <h1>Perpustakaan SMAN 103</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="catalogue.html" class="active">Catalogue</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Book Catalogue</h2>
+        </section>
+
+        <section class="catalogue-controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search books...">
+                <button onclick="searchBooks()">Search</button>
+            </div>
+            <div class="filter">
+                <select id="categoryFilter" onchange="filterBooks()">
+                    <option value="">All Categories</option>
+                    <option value="Buku Pelajaran">Buku Pelajaran</option>
+                    <option value="Lembar Kerja Siswa">Lembar Kerja Siswa</option>
+                    <option value="Buku Panduan Guru">Buku Panduan Guru</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="books-grid" id="booksContainer">
+            <!-- Books will be dynamically loaded here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Perpustakaan SMAN 103. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
